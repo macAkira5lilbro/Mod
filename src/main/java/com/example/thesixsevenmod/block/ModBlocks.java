@@ -5,8 +5,10 @@ import com.example.thesixsevenmod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HoneyBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -50,4 +52,18 @@ public class ModBlocks {
                 .requiresCorrectToolForDrops()
                 .strength(3.0F, 3.0F)
                     .sound(SoundType.TUFF)));
+
+    public static final DeferredBlock<Block> SIX_SEVEN_BLOCK =
+            registerBlock("six_seven_block", () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)));
+
+    public static final DeferredBlock<Block> WALLRUN_BLOCK =
+            registerBlock("wallrun_block", () -> new HoneyBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE)
+                    .speedFactor(1.5F)
+                    .jumpFactor(1.5F)
+                    .strength(1.5F, 6.0F)));
 }

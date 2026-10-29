@@ -82,6 +82,8 @@ public class TheSixSevenMod {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.POLISHED_GREENSTONE_BLOCK);
             event.accept(ModBlocks.RAW_GREENSTONE_BLOCK);
+            event.accept(ModBlocks.SIX_SEVEN_BLOCK);
+            event.accept(ModBlocks.WALLRUN_BLOCK);
         }
     }
 
