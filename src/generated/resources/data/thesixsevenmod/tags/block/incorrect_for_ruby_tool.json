@@ -1,8 +1,0 @@
-{
-  "remove": [
-    "#thesixsevenmod:needs_ruby_tool"
-  ],
-  "values": [
-    "#minecraft:incorrect_for_iron_tool"
-  ]
-}

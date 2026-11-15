@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "thesixsevenmod:block/polished_ruby_block"
-  }
-}

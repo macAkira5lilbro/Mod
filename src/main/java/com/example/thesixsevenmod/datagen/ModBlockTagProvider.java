@@ -23,13 +23,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.POLISHED_GREENSTONE_BLOCK.get())
                 .add(ModBlocks.POLISHED_RUBY_BLOCK.get())
                 .add(ModBlocks.RAW_GREENSTONE_BLOCK.get())
-                .add(ModBlocks.RAW_RUBY_BLOCK.get());
+                .add(ModBlocks.RAW_RUBY_BLOCK.get())
+                .add(ModBlocks.WALLRUN_BLOCK.get());
 
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.POLISHED_GREENSTONE_BLOCK.get())
                 .add(ModBlocks.POLISHED_RUBY_BLOCK.get())
                 .add(ModBlocks.RAW_GREENSTONE_BLOCK.get())
-                .add(ModBlocks.RAW_RUBY_BLOCK.get());
+                .add(ModBlocks.RAW_RUBY_BLOCK.get())
+                .add(ModBlocks.WALLRUN_BLOCK.get());
 
         tag(ModTags.Blocks.NEEDS_RUBY_TOOL)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);

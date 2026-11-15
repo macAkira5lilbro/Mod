@@ -65,5 +65,7 @@ public class ModItems {
             ITEMS.register("ruby_hoe", () -> new HoeItem(ModToolTiers.RUBY, new Item.Properties()
                     .attributes(HoeItem.createAttributes(ModToolTiers.RUBY, 0, -3.0f))));
 
+    public static final DeferredItem<Item> ESSENCE_PLACEHOLDER =
+            ITEMS.register("essence_placeholder", () -> new Item(new Item.Properties()));
 
 }

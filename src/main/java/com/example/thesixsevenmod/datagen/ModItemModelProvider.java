@@ -24,6 +24,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.FRIED_EGG.get());
         basicItem(ModItems.KIWI_BURGER.get());
         basicItem(ModItems.ORE_LOCATOR.get());
+        basicItem(ModItems.ESSENCE_PLACEHOLDER.get());
 
         handheldItem(ModItems.RUBY_SWORD);
         handheldItem(ModItems.RUBY_PICKAXE);

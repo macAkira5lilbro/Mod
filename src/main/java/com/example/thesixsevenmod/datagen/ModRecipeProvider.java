@@ -8,10 +8,11 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -110,6 +111,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get()))
                 .save(pRecipeOutput, TheSixSevenMod.MODID + ":ruby_hoe_left");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WALLRUN_BLOCK.get())
+                .pattern("RRR")
+                .pattern("RHR")
+                .pattern("SSS")
+                .define('H', Blocks.HONEY_BLOCK)
+                .define('R', ModItems.RUBY.get())
+                .define('S', Items.STICK)
+                .save(pRecipeOutput);
+
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GREENSTONE.get(), 9)
                 .requires(ModBlocks.POLISHED_GREENSTONE_BLOCK.get())
@@ -125,6 +136,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.POLISHED_RUBY_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.POLISHED_RUBY_BLOCK.get()), has(ModBlocks.POLISHED_RUBY_BLOCK.get()))
                 .save(pRecipeOutput);
+
 
         oreSmelting(pRecipeOutput, GREENSTONE_SMELTABLES, RecipeCategory.MISC, ModItems.GREENSTONE.get(), 0.25f, 200, "greenstone");
         oreBlasting(pRecipeOutput, GREENSTONE_SMELTABLES, RecipeCategory.MISC, ModItems.GREENSTONE.get(), 0.25f, 100, "greenstone");
