@@ -1,0 +1,23 @@
+{
+
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+ "key": {
+   "#": {
+     "item": "minecraft:bamboo"
+   }
+    },
+    "pattern": [
+      "###",
+      "# #",
+      "###"
+  ],
+
+
+  "result": {
+    "count": 1,
+    "id": "sillymod:maison_block"
+  }
+
+
+}

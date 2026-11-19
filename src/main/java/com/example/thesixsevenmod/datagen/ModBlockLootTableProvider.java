@@ -34,6 +34,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.HAYDEN_DAMAN_BLOCK.get());
         dropSelf(ModBlocks.MAGIC_BLOCK.get());
         dropSelf(ModBlocks.WALLRUN_BLOCK.get());
+        dropSelf(ModBlocks.TECHNOBLADE_BLOCK.get());
+        dropSelf(ModBlocks.SPEEDICE.get());
+        dropSelf(ModBlocks.MAISON_BLOCK.get());
+        dropSelf(ModBlocks.RAFFI_BLOCK.get());
+        dropSelf(ModBlocks.THOMAS_BLOCK.get());
 
         add(ModBlocks.RAW_GREENSTONE_BLOCK.get(),
                 block -> createMultipleOreDrops(ModBlocks.RAW_GREENSTONE_BLOCK.get(), ModItems.RAW_GREENSTONE.get(), 2, 5));

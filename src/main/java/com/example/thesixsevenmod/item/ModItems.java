@@ -67,4 +67,10 @@ public class ModItems {
 
     public static final DeferredItem<Item> ESSENCE_PLACEHOLDER =
             ITEMS.register("essence_placeholder", () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> TROPHY =
+            ITEMS.register("trophy", () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> RUBIKSCUBE =
+            ITEMS.register("rubikscube", () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
 }
