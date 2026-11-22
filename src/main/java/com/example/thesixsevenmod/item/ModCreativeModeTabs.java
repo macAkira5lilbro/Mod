@@ -71,7 +71,7 @@ public class ModCreativeModeTabs {
     public static final Supplier<CreativeModeTab> CREATORS_TAB =
             CREATIVE_MOD_TAB.register("creators",
                     () -> CreativeModeTab.builder()
-                            .title(Component.translatable("creativetab.sillymod.creators"))
+                            .title(Component.translatable("creativetab.thesixsevenmod.creators"))
                             .icon(() -> new ItemStack(ModItems.TROPHY.get()))
                             .displayItems(((itemDisplayParameters, output) -> {
                                 output.accept(ModBlocks.MAISON_BLOCK);
