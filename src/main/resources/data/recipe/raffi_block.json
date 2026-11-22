@@ -1,0 +1,26 @@
+{
+
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:silverfish_spawn_egg"
+    }
+  },
+    "pattern": [
+      " # ",
+      " # ",
+      "###"
+    ],
+
+
+
+
+
+  "result": {
+    "count": 1,
+    "id": "thesixsevenmod:raffi_block"
+  }
+
+
+}

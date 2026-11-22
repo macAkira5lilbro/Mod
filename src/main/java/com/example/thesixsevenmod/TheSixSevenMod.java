@@ -1,24 +1,22 @@
 package com.example.thesixsevenmod;
 
 import com.example.thesixsevenmod.block.ModBlocks;
+import com.example.thesixsevenmod.item.ModCreativeModeTabs;
 import com.example.thesixsevenmod.item.ModItems;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
@@ -28,9 +26,6 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import static com.example.thesixsevenmod.item.ModItems.ITEMS;
@@ -59,14 +54,47 @@ public class TheSixSevenMod {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+
+        ModCreativeModeTabs.register(modEventBus);
         ModBlocks.register(modEventBus);
 
         ITEMS.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
+        NeoForge.EVENT_BUS.addListener(TheSixSevenMod::onPlayerDamage);
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+    }
+
+    public static void onPlayerDamage(LivingIncomingDamageEvent event) {
+        if (event.isCanceled()) return;
+
+        if(event.getEntity() instanceof Player player){
+            ItemStack charm = player.getOffhandItem();
+            EquipmentSlot slot = EquipmentSlot.OFFHAND;
+            if(!charm.is(ModItems.CHARM_OF_RESILIENCE.get())){
+                charm = player.getMainHandItem();
+                slot =  EquipmentSlot.MAINHAND;
+            }
+            if(!charm.is(ModItems.CHARM_OF_RESILIENCE.get())){
+                return;
+            }
+            float chance = player.getRandom().nextFloat();
+            if(chance <= 0.2f){
+
+                event.setCanceled(true);
+                player.invulnerableTime = Math.max(player.invulnerableTime, 30);
+            }
+            player.level().playSound(
+                    null,
+                    player.blockPosition(),
+                    SoundEvents.SHIELD_BLOCK,
+                    SoundSource.PLAYERS,
+                    1.0f, 1.0f
+            );
+            charm.hurtAndBreak(1, player, slot);
+        }
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
@@ -78,12 +106,19 @@ public class TheSixSevenMod {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.GREENSTONE);
             event.accept(ModItems.RAW_GREENSTONE);
+            event.accept(ModItems.RUBY);
+            event.accept(ModItems.RAW_RUBY);
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.POLISHED_GREENSTONE_BLOCK);
             event.accept(ModBlocks.RAW_GREENSTONE_BLOCK);
             event.accept(ModBlocks.SIX_SEVEN_BLOCK);
             event.accept(ModBlocks.WALLRUN_BLOCK);
+            event.accept(ModBlocks.POLISHED_RUBY_BLOCK);
+            event.accept(ModBlocks.RAW_RUBY_BLOCK);
+            event.accept(ModBlocks.LEO_FULLER_BLOCK);
+            event.accept(ModBlocks.OLIVER_REGAN_COE_BLOCK);
+            event.accept(ModBlocks.HAYDEN_DAMAN_BLOCK);
         }
     }
 

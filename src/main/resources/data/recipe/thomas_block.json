@@ -1,0 +1,22 @@
+
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:diamond_block"
+    },
+    "X": {
+      "item": "minecraft:goat_spawn_egg"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "thesixsevenmod:thomas_block"
+  }
+}

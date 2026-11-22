@@ -1,7 +1,10 @@
 package com.example.thesixsevenmod.block;
 
 import com.example.thesixsevenmod.TheSixSevenMod;
+import com.example.thesixsevenmod.block.custom.MagicBlock;
+import com.example.thesixsevenmod.block.custom.WallrunBlock;
 import com.example.thesixsevenmod.item.ModItems;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -66,4 +69,68 @@ public class ModBlocks {
                     .speedFactor(1.5F)
                     .jumpFactor(1.5F)
                     .strength(1.5F, 6.0F)));
+    public static final DeferredBlock<Block> LEO_FULLER_BLOCK =
+            registerBlock("leo_fuller_block", () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLUE)
+                    .strength(3.0F, 3.0F)));
+
+    public static final DeferredBlock<Block> OLIVER_REGAN_COE_BLOCK =
+            registerBlock("oliver_regan_coe_block", () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_ORANGE)
+                    .strength(3.0F, 3.0F)));
+
+    public static final DeferredBlock<Block> HAYDEN_DAMAN_BLOCK =
+            registerBlock("hayden_daman_block", () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BROWN)
+                    .strength(3.0F, 3.0F)));
+
+
+    public static final DeferredBlock<WallrunBlock> WALLRUN_BLOCK =
+            registerBlock("wallrun_block", () -> new WallrunBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BROWN)
+                    .strength(3.0F, 3.0F)));
+
+    public static final DeferredBlock<Block> MAGIC_BLOCK =
+            registerBlock("magic_block", () -> new MagicBlock(BlockBehaviour.Properties.of()
+                    .strength(2f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> POLISHED_RUBY_BLOCK =
+            registerBlock("polished_ruby_block", () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_RED)
+                    .requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F)
+                    .sound(SoundType.TUFF)));
+
+    public static final DeferredBlock<Block> RAW_RUBY_BLOCK =
+            registerBlock("raw_ruby_block", () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_RED)
+                    .requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F)
+                    .sound(SoundType.TUFF)));
+
+    public static final DeferredBlock<Block> TECHNOBLADE_BLOCK =
+            registerBlock("technoblade_block",() -> new Block(BlockBehaviour.Properties.of()
+                    .instabreak()
+                    .mapColor(MapColor.EMERALD)));
+
+    public static final DeferredBlock<Block> SPEEDICE =
+            registerBlock("speedice",() -> new Block( BlockBehaviour.Properties.of()
+                    .speedFactor(1.15F)
+                    .mapColor(MapColor.ICE)
+                    .friction(0.98F)
+                    .randomTicks()
+                    .strength(0.5F)
+                    .sound(SoundType.POWDER_SNOW)
+                    .noOcclusion()
+                    .isValidSpawn((p_187426_, p_187427_, p_187428_, p_187429_) -> p_187429_ == EntityType.POLAR_BEAR)));
+
+    public static final DeferredBlock<Block> MAISON_BLOCK =
+            registerBlock("maison_block",() -> new Block(BlockBehaviour.Properties.of().sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> RAFFI_BLOCK =
+            registerBlock("raffi_block",() -> new Block(BlockBehaviour.Properties.of().sound(SoundType.ANCIENT_DEBRIS)));
+
+    public static final DeferredBlock<Block> THOMAS_BLOCK =
+            registerBlock("thomas_block",() -> new Block(BlockBehaviour.Properties.of().sound(SoundType.SLIME_BLOCK)));
 }
