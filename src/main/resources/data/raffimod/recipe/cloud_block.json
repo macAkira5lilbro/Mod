@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:white_stained_glass"
+    },
+    "W": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "pattern": [
+    "GWG"
+  ],
+  "result": {
+    "count": 8,
+    "id": "thesixsevenmod:cloud_block"
+  }
+}

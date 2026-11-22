@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:stone"
+    },
+    "W": {
+      "item": "minecraft:wind_charge"
+    },
+    "S": {
+      "item": "thesixsevenmod:speed_essence"
+    }
+  },
+  "pattern": [
+    "###",
+    "WSW",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "thesixsevenmod:wind_charge_block"
+  }
+}

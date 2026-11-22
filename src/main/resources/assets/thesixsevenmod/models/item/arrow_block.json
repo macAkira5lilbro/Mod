@@ -1,0 +1,6 @@
+{
+  "parent": "thesixsevenmod:block/arrow_block",
+  "textures": {
+    "all": "thesixsevenmod:block/arrow_block"
+  }
+}

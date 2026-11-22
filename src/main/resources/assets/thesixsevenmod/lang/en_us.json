@@ -28,5 +28,13 @@
   "creativetab.thesixsevenmod.blocks": "The Six Seven Mod Blocks",
 
   "tooltip.thesixsevenmod.magic_block.shift_down": "Use this block to turn certain green gems into blue ones",
-  "tooltip.thesixsevenmod.magic_block": "Press Shift for more information"
+  "tooltip.thesixsevenmod.magic_block": "Press Shift for more information",
+
+
+  "block.thesixsevenmod.cloud_block": "Cloud",
+  "block.thesixsevenmod.arrow_block": "Arrow Block",
+  "item.thesixsevenmod.trophy": "Trophy",
+  "block.thesixsevenmod.wind_charge_block": "WindBurst Block",
+  "item.thesixsevenmod.speed_essence": "Speed Essence",
+  "item.thesixsevenmod.trophy_shard": "Trophy Shard"
 }

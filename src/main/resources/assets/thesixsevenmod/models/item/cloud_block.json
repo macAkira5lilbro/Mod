@@ -1,0 +1,6 @@
+{
+  "parent": "thesixsevenmod:block/cloud_block",
+  "textures": {
+    "all": "thesixsevenmod:block/cloud_block"
+  }
+}

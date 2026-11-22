@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:stone"
+    },
+    "Y": {
+      "item": "minecraft:yellow_dye"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "###",
+    "YSY",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "thesixsevenmod:arrow_block"
+  }
+}
