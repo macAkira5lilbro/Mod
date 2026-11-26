@@ -42,6 +42,7 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.RUBY_AXE);
                                 output.accept(ModItems.RUBY_HOE);
                                 output.accept(ModItems.ESSENCE_PLACEHOLDER);
+                                output.accept(ModItems.RUBIKSCUBE);
                                 output.accept(ModItems.SPEED_ESSENCE);
                                 output.accept(ModItems.TROPHY_SHARD);
                                 output.accept(ModItems.TROPHY);
@@ -63,10 +64,24 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.HAYDEN_DAMAN_BLOCK);
                                 output.accept(ModBlocks.WALLRUN_BLOCK);
                                 output.accept(ModBlocks.MAGIC_BLOCK);
+                                output.accept(ModBlocks.TECHNOBLADE_BLOCK);
+                                output.accept(ModBlocks.SPEEDICE);
                                 output.accept(ModBlocks.WIND_CHARGE_BLOCK);
                                 output.accept(ModBlocks.CLOUD_BLOCK);
                                 output.accept(ModBlocks.ARROW_BLOCK);
                             }))
                             .withTabsBefore(ResourceLocation.fromNamespaceAndPath(TheSixSevenMod.MODID, "thesixsevenmod_items"))
+                            .build());
+
+    public static final Supplier<CreativeModeTab> CREATORS_TAB =
+            CREATIVE_MOD_TAB.register("creators",
+                    () -> CreativeModeTab.builder()
+                            .title(Component.translatable("creativetab.thesixsevenmod.creators"))
+                            .icon(() -> new ItemStack(ModItems.TROPHY.get()))
+                            .displayItems(((itemDisplayParameters, output) -> {
+                                output.accept(ModBlocks.MAISON_BLOCK);
+                                output.accept(ModBlocks.RAFFI_BLOCK);
+                                output.accept(ModBlocks.THOMAS_BLOCK);
+                            }))
                             .build());
 }

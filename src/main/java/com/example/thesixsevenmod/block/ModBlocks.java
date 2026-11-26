@@ -4,6 +4,7 @@ import com.example.thesixsevenmod.TheSixSevenMod;
 import com.example.thesixsevenmod.block.custom.MagicBlock;
 import com.example.thesixsevenmod.block.custom.WallrunBlock;
 import com.example.thesixsevenmod.item.ModItems;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -123,4 +124,28 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WIND_CHARGE_BLOCK =
             registerBlock("wind_charge_block", () -> new WindChargeBlock());
 
+    public static final DeferredBlock<Block> TECHNOBLADE_BLOCK =
+            registerBlock("technoblade_block",() -> new Block(BlockBehaviour.Properties.of()
+                    .instabreak()
+                    .mapColor(MapColor.EMERALD)));
+
+    public static final DeferredBlock<Block> SPEEDICE =
+            registerBlock("speedice",() -> new Block( BlockBehaviour.Properties.of()
+                    .speedFactor(1.15F)
+                    .mapColor(MapColor.ICE)
+                    .friction(0.98F)
+                    .randomTicks()
+                    .strength(0.5F)
+                    .sound(SoundType.POWDER_SNOW)
+                    .noOcclusion()
+                    .isValidSpawn((p_187426_, p_187427_, p_187428_, p_187429_) -> p_187429_ == EntityType.POLAR_BEAR)));
+
+    public static final DeferredBlock<Block> MAISON_BLOCK =
+            registerBlock("maison_block",() -> new Block(BlockBehaviour.Properties.of().sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> RAFFI_BLOCK =
+            registerBlock("raffi_block",() -> new Block(BlockBehaviour.Properties.of().sound(SoundType.ANCIENT_DEBRIS)));
+
+    public static final DeferredBlock<Block> THOMAS_BLOCK =
+            registerBlock("thomas_block",() -> new Block(BlockBehaviour.Properties.of().sound(SoundType.SLIME_BLOCK)));
 }
