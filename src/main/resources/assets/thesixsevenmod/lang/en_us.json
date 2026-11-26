@@ -27,9 +27,11 @@
 
   "creativetab.thesixsevenmod.items": "The Six Seven Mod Items",
   "creativetab.thesixsevenmod.blocks": "The Six Seven Mod Blocks",
+  "creativetab.thesixsevenmod.creators": "Creators",
 
   "tooltip.thesixsevenmod.magic_block.shift_down": "Use this block to turn certain green gems into blue ones",
   "tooltip.thesixsevenmod.magic_block": "Press Shift for more information",
+
   "item.thesixsevenmod.greenstone": "sus greenstone",
   "item.thesixsevenmod.trophy": "Trophy",
   "item.thesixsevenmod.rocketship": "Rocketship",
@@ -40,10 +42,6 @@
   "block.thesixsevenmod.maison_block": "Maison",
   "block.thesixsevenmod.raffi_block": "Raffi",
   "block.thesixsevenmod.thomas_block": "Thomas",
-  "creativetab.thesixsevenmod.items": "thesixsevenmod Items",
-
-  "creativetab.thesixsevenmod.creators": "Creators",
-
 
   "block.thesixsevenmod.cloud_block": "Cloud",
   "block.thesixsevenmod.arrow_block": "Arrow Block",

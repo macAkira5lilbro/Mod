@@ -65,12 +65,11 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(1.5F, 6.0F)));
 
-    public static final DeferredBlock<Block> WALLRUN_BLOCK =
-            registerBlock("wallrun_block", () -> new HoneyBlock(BlockBehaviour.Properties.of()
+    public static final DeferredBlock<WallrunBlock> WALLRUN_BLOCK =
+            registerBlock("wallrun_block", () -> new WallrunBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE)
-                    .speedFactor(1.5F)
-                    .jumpFactor(1.5F)
-                    .strength(1.5F, 6.0F)));
+                    .strength(3.0F, 3.0F)));
+
     public static final DeferredBlock<Block> LEO_FULLER_BLOCK =
             registerBlock("leo_fuller_block", () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_BLUE)
@@ -83,12 +82,6 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> HAYDEN_DAMAN_BLOCK =
             registerBlock("hayden_daman_block", () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_BROWN)
-                    .strength(3.0F, 3.0F)));
-
-
-    public static final DeferredBlock<WallrunBlock> WALLRUN_BLOCK =
-            registerBlock("wallrun_block", () -> new WallrunBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_BROWN)
                     .strength(3.0F, 3.0F)));
 
