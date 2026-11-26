@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thesixsevenmod:polished_ruby_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "thesixsevenmod:ruby"
+  }
+}

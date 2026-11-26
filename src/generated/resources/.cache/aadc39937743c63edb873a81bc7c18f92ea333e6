@@ -1,0 +1,5 @@
+// 1.21.1	2026-11-20T09:59:51.5669125	Tags for minecraft:block mod id thesixsevenmod
+37dfafb2e6c06f42121206001ce7b47214d4aa36 data/minecraft/tags/block/mineable/pickaxe.json
+37dfafb2e6c06f42121206001ce7b47214d4aa36 data/minecraft/tags/block/needs_stone_tool.json
+f4efb7d11e6b75b73eda9fd32a83cb46eb89c394 data/thesixsevenmod/tags/block/incorrect_for_ruby_tool.json
+32b13946c4cd1f944b029659ccce5fcb2adad4ff data/thesixsevenmod/tags/block/needs_ruby_tool.json

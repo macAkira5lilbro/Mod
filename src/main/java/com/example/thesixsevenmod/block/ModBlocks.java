@@ -1,11 +1,15 @@
 package com.example.thesixsevenmod.block;
 
 import com.example.thesixsevenmod.TheSixSevenMod;
+import com.example.thesixsevenmod.block.custom.MagicBlock;
+import com.example.thesixsevenmod.block.custom.WallrunBlock;
 import com.example.thesixsevenmod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HoneyBlock;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.GlazedTerracottaBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -66,4 +70,57 @@ public class ModBlocks {
                     .speedFactor(1.5F)
                     .jumpFactor(1.5F)
                     .strength(1.5F, 6.0F)));
+    public static final DeferredBlock<Block> LEO_FULLER_BLOCK =
+            registerBlock("leo_fuller_block", () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLUE)
+                    .strength(3.0F, 3.0F)));
+
+    public static final DeferredBlock<Block> OLIVER_REGAN_COE_BLOCK =
+            registerBlock("oliver_regan_coe_block", () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_ORANGE)
+                    .strength(3.0F, 3.0F)));
+
+    public static final DeferredBlock<Block> HAYDEN_DAMAN_BLOCK =
+            registerBlock("hayden_daman_block", () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BROWN)
+                    .strength(3.0F, 3.0F)));
+
+
+    public static final DeferredBlock<WallrunBlock> WALLRUN_BLOCK =
+            registerBlock("wallrun_block", () -> new WallrunBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BROWN)
+                    .strength(3.0F, 3.0F)));
+
+    public static final DeferredBlock<Block> MAGIC_BLOCK =
+            registerBlock("magic_block", () -> new MagicBlock(BlockBehaviour.Properties.of()
+                    .strength(2f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> POLISHED_RUBY_BLOCK =
+            registerBlock("polished_ruby_block", () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_RED)
+                    .requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F)
+                    .sound(SoundType.TUFF)));
+
+    public static final DeferredBlock<Block> RAW_RUBY_BLOCK =
+            registerBlock("raw_ruby_block", () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_RED)
+                    .requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F)
+                    .sound(SoundType.TUFF)));
+    public static final DeferredBlock<Block> ARROW_BLOCK =
+            registerBlock("arrow_block", () -> new GlazedTerracottaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_GLAZED_TERRACOTTA)));
+
+    public static final DeferredBlock<Block> CLOUD_BLOCK =
+            registerBlock("cloud_block", () -> new Block(BlockBehaviour.Properties.of().
+                    mapColor(MapColor.SNOW).
+                    instrument(NoteBlockInstrument.GUITAR).
+                    strength(0.8F).
+                    sound(SoundType.WOOL).
+                    ignitedByLava()));
+
+    public static final DeferredBlock<Block> WIND_CHARGE_BLOCK =
+            registerBlock("wind_charge_block", () -> new WindChargeBlock());
+
 }

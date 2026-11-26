@@ -1,9 +1,41 @@
 {
   "item.thesixsevenmod.greenstone": "Greenstone",
   "item.thesixsevenmod.raw_greenstone": "Raw Greenstone",
+  "item.thesixsevenmod.fried_egg": "Fried Egg",
+  "item.thesixsevenmod.kiwi_burger": "Kiwi Burger",
+  "item.thesixsevenmod.charm_of_resilience": "Charm of Resilience",
+  "item.thesixsevenmod.ore_locator": "Ore Locator",
+  "item.thesixsevenmod.ruby": "Ruby",
+  "item.thesixsevenmod.raw_ruby": "Raw Ruby",
+  "item.thesixsevenmod.ruby_sword": "Ruby Sword",
+  "item.thesixsevenmod.ruby_pickaxe": "Ruby Pickaxe",
+  "item.thesixsevenmod.ruby_shovel": "Ruby Shovel",
+  "item.thesixsevenmod.ruby_axe": "Ruby Axe",
+  "item.thesixsevenmod.ruby_hoe": "Ruby Hoe",
+  "item.thesixsevenmod.essence_placeholder": "Speed Essence",
 
   "block.thesixsevenmod.polished_greenstone_block": "Polished Greenstone Block",
   "block.thesixsevenmod.raw_greenstone_block": "Raw Greenstone Block",
   "block.thesixsevenmod.six_seven_block": "Six Seven Block",
-  "block.thesixsevenmod.wallrun_block": "Wallrun Block"
+  "block.thesixsevenmod.polished_ruby_block": "Polished Ruby Block",
+  "block.thesixsevenmod.raw_ruby_block": "Raw Ruby Block",
+  "block.thesixsevenmod.leo_fuller_block": "Leo Fuller Block",
+  "block.thesixsevenmod.oliver_regan_coe_block": "Oliver Regan-Coe Block",
+  "block.thesixsevenmod.hayden_daman_block": "Hayden Daman Block",
+  "block.thesixsevenmod.wallrun_block": "Wallrun Block",
+  "block.thesixsevenmod.magic_block": "Magic Block",
+
+  "creativetab.thesixsevenmod.items": "The Six Seven Mod Items",
+  "creativetab.thesixsevenmod.blocks": "The Six Seven Mod Blocks",
+
+  "tooltip.thesixsevenmod.magic_block.shift_down": "Use this block to turn certain green gems into blue ones",
+  "tooltip.thesixsevenmod.magic_block": "Press Shift for more information",
+
+
+  "block.thesixsevenmod.cloud_block": "Cloud",
+  "block.thesixsevenmod.arrow_block": "Arrow Block",
+  "item.thesixsevenmod.trophy": "Trophy",
+  "block.thesixsevenmod.wind_charge_block": "WindBurst Block",
+  "item.thesixsevenmod.speed_essence": "Speed Essence",
+  "item.thesixsevenmod.trophy_shard": "Trophy Shard"
 }
