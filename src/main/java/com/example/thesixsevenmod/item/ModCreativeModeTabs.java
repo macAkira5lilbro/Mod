@@ -43,6 +43,8 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.RUBY_HOE);
                                 output.accept(ModItems.ESSENCE_PLACEHOLDER);
                                 output.accept(ModItems.RUBIKSCUBE);
+                                output.accept(ModItems.SPEED_ESSENCE);
+                                output.accept(ModItems.TROPHY_SHARD);
                                 output.accept(ModItems.TROPHY);
                             }))
                                     .build());
@@ -64,6 +66,9 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.MAGIC_BLOCK);
                                 output.accept(ModBlocks.TECHNOBLADE_BLOCK);
                                 output.accept(ModBlocks.SPEEDICE);
+                                output.accept(ModBlocks.WIND_CHARGE_BLOCK);
+                                output.accept(ModBlocks.CLOUD_BLOCK);
+                                output.accept(ModBlocks.ARROW_BLOCK);
                             }))
                             .withTabsBefore(ResourceLocation.fromNamespaceAndPath(TheSixSevenMod.MODID, "thesixsevenmod_items"))
                             .build());

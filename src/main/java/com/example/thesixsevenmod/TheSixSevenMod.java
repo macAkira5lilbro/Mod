@@ -3,13 +3,17 @@ package com.example.thesixsevenmod;
 import com.example.thesixsevenmod.block.ModBlocks;
 import com.example.thesixsevenmod.item.ModCreativeModeTabs;
 import com.example.thesixsevenmod.item.ModItems;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -61,6 +65,7 @@ public class TheSixSevenMod {
         ITEMS.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
+        NeoForge.EVENT_BUS.addListener(this::onPlayerTick);
 
         NeoForge.EVENT_BUS.addListener(TheSixSevenMod::onPlayerDamage);
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
@@ -97,6 +102,22 @@ public class TheSixSevenMod {
         }
     }
 
+    private void onPlayerTick(PlayerTickEvent.Post event) {
+        Player player = event.getEntity();
+        if (player instanceof ServerPlayer serverPlayer) {
+
+            ItemStack offhand = serverPlayer.getOffhandItem();
+            EquipmentSlot slot = EquipmentSlot.OFFHAND;
+
+            if (offhand.is(ModItems.TROPHY.get())){
+                serverPlayer.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20, 1, false, false));
+                serverPlayer.addEffect(new MobEffectInstance(MobEffects.JUMP, 20, 1, false, false));
+                serverPlayer.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 20, 1, false, false));
+            }
+
+        }
+    }
+
     private void commonSetup(FMLCommonSetupEvent event) {
 
     }
@@ -119,6 +140,24 @@ public class TheSixSevenMod {
             event.accept(ModBlocks.LEO_FULLER_BLOCK);
             event.accept(ModBlocks.OLIVER_REGAN_COE_BLOCK);
             event.accept(ModBlocks.HAYDEN_DAMAN_BLOCK);
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.CLOUD_BLOCK);
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.ARROW_BLOCK);
+        }
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.TROPHY);
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.WIND_CHARGE_BLOCK);
+        }
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.SPEED_ESSENCE);
+        }
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.TROPHY_SHARD);
         }
     }
 

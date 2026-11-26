@@ -1,0 +1,32 @@
+
+
+{
+  "variants": {
+    "facing=down": {
+      "model": "thesixsevenmod:block/arrow_block",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "thesixsevenmod:block/arrow_block",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thesixsevenmod:block/arrow_block",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "thesixsevenmod:block/arrow_block",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "thesixsevenmod:block/arrow_block"
+    },
+    "facing=west": {
+      "model": "thesixsevenmod:block/arrow_block",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

@@ -43,5 +43,13 @@
   "block.thesixsevenmod.thomas_block": "Thomas",
   "creativetab.thesixsevenmod.items": "thesixsevenmod Items",
 
-  "creativetab.thesixsevenmod.creators": "Creators"
+  "creativetab.thesixsevenmod.creators": "Creators",
+
+
+  "block.thesixsevenmod.cloud_block": "Cloud",
+  "block.thesixsevenmod.arrow_block": "Arrow Block",
+  "item.thesixsevenmod.trophy": "Trophy",
+  "block.thesixsevenmod.wind_charge_block": "WindBurst Block",
+  "item.thesixsevenmod.speed_essence": "Speed Essence",
+  "item.thesixsevenmod.trophy_shard": "Trophy Shard"
 }
